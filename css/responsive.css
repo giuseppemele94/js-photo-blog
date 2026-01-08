@@ -1,0 +1,13 @@
+/* Responsive tablet fino a 878px */
+@media (max-width: 878px){
+  .card{
+    width: calc((100% - 20px) / 2);
+  }
+}
+
+/* Responsive mobile fino a 639px*/
+@media (max-width: 639px){
+  .card{
+    width: calc(100% - 20px) ;
+  }
+}

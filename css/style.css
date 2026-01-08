@@ -15,7 +15,7 @@
 }
 
 body {
-    background-image:url("img/cork.png") ;
+    background-image:url("../img/cork.png") ;
 }
 .header-container {
     display:flex; 
@@ -23,14 +23,11 @@ body {
     height: 90px; 
     justify-content: center;
     align-items: center;
-    background-image:url("img/wall.png") ;
+    background-image:url("../img/wall.png") ;
     font-size: 30px;
 }
 
-main{
-  min-height: calc(100vh - 90px);
-  
-}
+
 
 .main-container{
   width: 80%;
@@ -69,3 +66,7 @@ main{
   z-index: 2;
   display: block;
 }
+
+
+
+
