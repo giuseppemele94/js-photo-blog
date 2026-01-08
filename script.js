@@ -22,7 +22,23 @@ axios.get(endpoint)
         //destruttiriamo l'oggetto
         const {title,date,url} = obj;
         //console.log(title,date,url); 
-    })
+
+        picArrayOutput += `
+        
+             <div class="card">
+                <div class="img-container">
+                    <img src="${url}" alt="">
+                    <img class ="pin"src="./img/pin.svg" alt="">
+                </div>
+                <div class="title-img title-font">${title}</div>
+                <div class="date-img date-font">${date}</div>
+            </div>
+        `;
+
+    });
+
+    //inserimento in pagina card accumulate
+    output.innerHTML = picArrayOutput; 
 })
 
 .catch(error => {
