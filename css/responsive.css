@@ -8,6 +8,6 @@
 /* Responsive mobile fino a 639px*/
 @media (max-width: 639px){
   .card{
-    width: calc(100% - 20px) ;
+    width: 100% ;
   }
 }
