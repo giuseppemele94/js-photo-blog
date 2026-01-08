@@ -29,14 +29,29 @@ body {
 
 main{
   min-height: calc(100vh - 90px);
+  
 }
 
 .main-container{
   width: 80%;
   min-height: inherit; /* erededità la proprietà dal genitore  */
   margin: 0 auto;
-  background: white;
+ 
   display: flex; 
   gap: 20px;
   flex-wrap: wrap;
+  padding: 30px; 
+}
+
+.card {
+    width: calc((100% - 40px) /3);
+}
+
+.img-container {
+    width:100%;
+    
+}
+.img-container img{
+  width: 100%;
+  display: block;
 }
