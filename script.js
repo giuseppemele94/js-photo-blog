@@ -1,30 +1,29 @@
 //seleziono l'elemento di container dove verrano stampate le card 
-const output = document.querySelector(".main-container"); 
+const output = document.querySelector(".main-container");
 
 //creo riferimento a endpoint per chiamata API
-const endpoint = "https://lanciweb.github.io/demo/api/pictures/"; 
+const endpoint = "https://lanciweb.github.io/demo/api/pictures/";
 
 
 //chiamata ajax all'end point 
 axios.get(endpoint)
-.then(response => {
+    .then(response => {
 
-    //ottengo l'array di oggetti dall'API 
-    const picArrayObjects = response.data;
-    //console.log(picArrayObjects); 
+        //ottengo l'array di oggetti dall'API 
+        const picArrayObjects = response.data;
+        //console.log(picArrayObjects); 
 
-    //variabile di accumulo stinga output
-    let picArrayOutput = "";
+        //variabile di accumulo stinga output
+        let picArrayOutput = "";
 
-    //ciclo su array per estrapolare title,date,url foto
-    picArrayObjects.forEach((obj) => {
+        //ciclo su array per estrapolare title,date,url foto
+        picArrayObjects.forEach((obj) => {
 
-        //destruttiriamo l'oggetto
-        const {title,date,url} = obj;
-        //console.log(title,date,url); 
+            //destruttiriamo l'oggetto
+            const { title, date, url } = obj;
+            //console.log(title,date,url); 
 
-        picArrayOutput += `
-        
+            picArrayOutput += `
              <div class="card">
                 <div class="img-container">
                     <img src="${url}" alt="">
@@ -35,18 +34,18 @@ axios.get(endpoint)
             </div>
         `;
 
-    });
+        });
 
-    //inserimento in pagina card accumulate
-    output.innerHTML = picArrayOutput; 
-})
+        //inserimento in pagina card accumulate
+        output.innerHTML = picArrayOutput;
+    })
 
-.catch(error => {
-    //codice da eseguire in caso di errore
-    console.log("Errore nel recupero dei dati",error);
+    .catch(error => {
+        //codice da eseguire in caso di errore
+        console.log("Errore nel recupero dei dati", error);
 
-}) 
-.finally(()=>{
-    //codice da esegiure sempre 
-    console.log("Operazione andata a buon fine");
-}); 
+    })
+    .finally(() => {
+        //codice da esegiure sempre 
+        console.log("Operazione andata a buon fine");
+    }); 

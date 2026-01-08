@@ -5,11 +5,13 @@
     box-sizing: border-box;
 }
 
-
 .title-font {
   font-family: 'Edu TAS Beginner', sans-serif;
 }
 
+.title-img {
+  padding-top:10px; 
+}
 .date-font {
     font-family: 'Sometype Mono', monospace;
 }
@@ -17,6 +19,7 @@
 body {
     background-image:url("../img/cork.png") ;
 }
+
 .header-container {
     display:flex; 
     width: 100%;
@@ -27,13 +30,10 @@ body {
     font-size: 30px;
 }
 
-
-
 .main-container{
   width: 80%;
   min-height: inherit; /* erededità la proprietà dal genitore  */
   margin: 0 auto;
- 
   display: flex; 
   gap: 20px;
   flex-wrap: wrap;
@@ -51,6 +51,7 @@ body {
     position: relative;
     
 }
+
 .img-container img{
   width: 100%;
   display: block;
