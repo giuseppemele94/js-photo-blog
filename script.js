@@ -8,7 +8,7 @@ const endpoint = "https://lanciweb.github.io/demo/api/pictures/";
 const overlayContainer = document.querySelector(".overlay-container");
 
 //creo riferimento al botton dell'overlay
-const buttonOverlay = document.querySelector("overlay-close"); 
+const buttonOverlay = document.querySelector(".overlay-close"); 
 
 //chiamata ajax all'end point 
 axios.get(endpoint)
@@ -67,3 +67,10 @@ axios.get(endpoint)
         //codice da esegiure sempre 
         console.log("Operazione andata a buon fine");
     }); 
+
+
+    //al click del pulsante chiudi , nascondo overlay container 
+
+    buttonOverlay.addEventListener("click",() => {
+        overlayContainer.classList.add("d-none"); 
+    })
