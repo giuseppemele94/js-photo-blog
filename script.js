@@ -10,6 +10,9 @@ const overlayContainer = document.querySelector(".overlay-container");
 //creo riferimento al botton dell'overlay
 const buttonOverlay = document.querySelector(".overlay-close"); 
 
+//riferimento alle immagini in overlay per la stampa
+const overlayImg = document.querySelector(".overlay-img");
+
 //chiamata ajax all'end point 
 axios.get(endpoint)
     .then(response => {
@@ -52,6 +55,13 @@ axios.get(endpoint)
         allCards.forEach((card) => {
             //al click rimuovo la classe d-none
             card.addEventListener("click", () => {
+
+                //prendo l'immagine dentro la card che ho gia
+                const imgCard = card.querySelector(".img-container img");
+
+                //imposto nell'overlay la stessa immagine cliccata
+                overlayImg.src = imgCard.src ; 
+                
                 overlayContainer.classList.remove("d-none"); 
             })
         })
