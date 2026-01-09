@@ -121,3 +121,8 @@ body {
   padding: 8px 14px;
   cursor: pointer;
 }
+
+/*Il container Overlay parte in d-none */
+.d-none {
+  display:none; 
+}
