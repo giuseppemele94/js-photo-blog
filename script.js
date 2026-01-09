@@ -29,7 +29,7 @@ axios.get(endpoint)
                     <img src="${url}" alt="">
                     <img class ="pin"src="./img/pin.svg" alt="">
                 </div>
-                <div class="title-img title-font">${title}</div>
+                <div class="title-img title-font">${title.toUpperCase()}</div>
                 <div class="date-img date-font">${date}</div>
             </div>
         `;
