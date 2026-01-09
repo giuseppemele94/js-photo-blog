@@ -4,6 +4,11 @@ const output = document.querySelector(".main-container");
 //creo riferimento a endpoint per chiamata API
 const endpoint = "https://lanciweb.github.io/demo/api/pictures/";
 
+//creo riferimento a overlay container 
+const overlayContainer = document.querySelector(".overlay-container");
+
+//creo riferimento al botton dell'overlay
+const buttonOverlay = document.querySelector("overlay-close"); 
 
 //chiamata ajax all'end point 
 axios.get(endpoint)
@@ -38,6 +43,19 @@ axios.get(endpoint)
 
         //inserimento in pagina card accumulate
         output.innerHTML = picArrayOutput;
+
+
+
+        /* al click sulle card tolgo il d-none di overlay container **/
+        const allCards = document.querySelectorAll(".card");
+        
+        allCards.forEach((card) => {
+            //al click rimuovo la classe d-none
+            card.addEventListener("click", () => {
+                overlayContainer.classList.remove("d-none"); 
+            })
+        })
+
     })
 
     .catch(error => {
